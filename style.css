@@ -1,0 +1,84 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ddfdfc, #ffc3a0);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.message h1 {
+    color: #ff19cd;
+    font-size: calc(24px + 5vw);
+    animation: fadeIn 1s ease-in-out infinite alternate;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#scroller {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+}
+
+#scroller-in h4 {
+    font-size: calc(20px + 3vw);
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+    opacity: 0;
+    position: absolute;
+    animation: scrollWord 10s ease-in-out infinite;
+}
+
+#fireworksButton {
+    padding: 10px 20px;
+    font-size: calc(16px + 1vw);
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#fireworksButton:hover {
+    background-color: #ff6b7c;
+}
+
+#fireworksCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
