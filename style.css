@@ -13,17 +13,12 @@ body, html {
 .container {
     text-align: center;
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .message h1 {
     color: #ff19cd;
-    font-size: calc(24px + 5vw);
+    font-size: 120px;
     animation: fadeIn 1s ease-in-out infinite alternate;
-    margin: 0;
 }
 
 @keyframes fadeIn {
@@ -37,18 +32,21 @@ body, html {
 
 #scroller {
     width: 100%;
+    height:100%;
     overflow: hidden;
-    position: relative;
+    position:relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 150px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-left: -140px;
+    height: 150px; /* Adjust this height according to your needs */
 }
-
 #scroller-in h4 {
-    font-size: calc(20px + 3vw);
+    font-size: 80px;
     font-weight: 900;
+    margin: -100px;
+    margin-left:-50px;
     color: #000;
     -webkit-text-stroke: 2px #ffffff;
     opacity: 0;
@@ -56,16 +54,46 @@ body, html {
     animation: scrollWord 10s ease-in-out infinite;
 }
 
+#scroller-in h4:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#scroller-in h4:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#scroller-in h4:nth-child(3) {
+    animation-delay: 4s;
+}
+
+#scroller-in h4:nth-child(4) {
+    animation-delay: 6s;
+}
+
+#scroller-in h4:nth-child(5) {
+    animation-delay: 8s;
+}
+
+@keyframes scrollWord {
+    0%, 20% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    25%, 100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
 #fireworksButton {
     padding: 10px 20px;
-    font-size: calc(16px + 1vw);
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
     background-color: #ff4b5c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 0px;
     transition: background-color 0.3s ease;
 }
 
@@ -79,6 +107,6 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    pointer-events: none; /* So it doesn't interfere with button clicks */
     z-index: 999;
 }
