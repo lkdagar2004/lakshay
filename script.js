@@ -6,14 +6,12 @@ canvas.height = window.innerHeight;
 let fireworks = [];
 let particles = [];
 
-// Function to play the firework sound
 function playFireworkSound() {
     const sound = document.getElementById('fireworkSound');
-    sound.currentTime = 0; // Rewind to the start
+    sound.currentTime = 0;
     sound.play();
 }
 
-// Firework constructor
 class Firework {
     constructor(sx, sy, tx, ty) {
         this.x = sx;
@@ -74,7 +72,7 @@ class Firework {
     }
 
     createParticles(x, y) {
-        const particleCount = 60; // Increased particle count for a better explosion
+        const particleCount = 60;
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle(x, y));
         }
