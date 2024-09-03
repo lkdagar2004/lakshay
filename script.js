@@ -72,7 +72,7 @@ class Firework {
     }
 
     createParticles(x, y) {
-        const particleCount = 60;
+        const particleCount = 70;
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle(x, y));
         }
@@ -127,7 +127,7 @@ class Particle {
 }
 
 document.getElementById('fireworksButton').addEventListener('click', () => {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
         const sx = Math.random() * canvas.width;
         const sy = canvas.height;
         const tx = Math.random() * canvas.width;
